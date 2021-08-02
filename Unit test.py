@@ -8,10 +8,7 @@ class TestMatrix(unittest.TestCase):
         A = Matrix([1,2,3,4], [2,3,4,1], [3,2,4,1])
         B = Matrix([4,3,2,1], [3,2,1,4], [2,3,1,4])
         C = A + B
-        # print(C.mat)
         M.assertEqual(C.mat, tuple([[5]*4]*3))
-        # except Exception as X:
-        #     print("Error")
 
     def test_sub(M):
 
@@ -29,7 +26,6 @@ class TestMatrix(unittest.TestCase):
         C = A ** 2
         m = np.array([[1,2,3,4], [2,3,4,1], [3,2,4,1], [2,4,1,3]])
         expec = np.linalg.matrix_power(m,2).tolist()
-        # print(f'{expec}, "\n" {C.mat}')
     
         M.assertEqual(list(C.mat), (expec))
     
