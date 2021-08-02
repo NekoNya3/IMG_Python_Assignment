@@ -1,10 +1,9 @@
-N=int(input("Enter the number of coins "))
-D=input("Enter the denomination of each coin separated by spaces ")
+N=int(input())
+D=input().split(" ")
 
-Splt=D.split(" ")
 coinList=[]
 
-for i in Splt:
+for i in D:
     coinList+=[int(i)]
 
 avrg=0
@@ -19,7 +18,7 @@ Sum=0
 for k in coinList:
     Sum+=k
     if Sum>avrg:
-        print("The minimum required number of coins are ", min+1)
+        print(min+1)
         break
     else:
         min+=1
